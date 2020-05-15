@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-test-01"]=this["webpackJsonpreact-test-01"]||[]).push([[0],{10:function(e,t,n){"use strict";n.r(t);var a=n(0),c=n.n(a),r=n(2),s=n.n(r),l=n(3),i=n.n(l),u=function(){return i.a.createElement("h2",{className:"title"},"\u0439\u0446\u0443\u0439\u0443\u0443")},o=function(){return c.a.createElement("section",{className:"statistics"},c.a.createElement(u,null))};s.a.render(c.a.createElement("div",null,c.a.createElement(o,null)),document.getElementById("root"))},4:function(e,t,n){e.exports=n(10)}},[[4,1,2]]]);
-//# sourceMappingURL=main.dd7300aa.chunk.js.map
