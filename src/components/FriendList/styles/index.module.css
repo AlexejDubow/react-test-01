@@ -1,0 +1,31 @@
+.friendList{
+  width: 300px;
+  list-style: none;
+  padding: 0;
+}
+.item{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+}
+.status{
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+.avatar{
+  margin: 0 10px;
+}
+.name{
+  margin: 0;
+}
+[data-online="true"]{
+  background-color: chartreuse;
+}
+[data-online="false"]{
+  background-color: red;
+}
