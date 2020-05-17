@@ -2,17 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './styles/index.module.css';
 
-const Profile = ({ name, tag, avatar, location, stats, alt }) => {
+const Profile = ({
+  name, tag, avatar, location, stats, alt = '',
+}) => {
   const { followers, views, likes } = stats;
 
   return (
     <div className={style.profile}>
       <div className={style.description}>
-        <img src={avatar} 
-        alt={alt}
-        className={style.avatar} />
+        <img
+          src={avatar}
+          alt={alt}
+          className={style.avatar}
+        />
         <p className={style.name}>{name}</p>
-        <p className={style.tag}>@{tag}</p>
+        <p className={style.tag}>
+          @
+          {tag}
+        </p>
         <p className={style.location}>{location}</p>
       </div>
       <ul className={style.stats}>
@@ -34,15 +41,11 @@ const Profile = ({ name, tag, avatar, location, stats, alt }) => {
 };
 export default Profile;
 
-
-Profile.defaultProps ={
-  alt: "user avatar",
-}
-Profile.propTypes={
+Profile.propTypes = {
   name: PropTypes.string.isRequired,
-  tag: PropTypes.string,
+  tag: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  stats: PropTypes.objectOf(PropTypes.number),
-  alt: PropTypes.string,
-}
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
+  alt: PropTypes.string.isRequired,
+};

@@ -4,11 +4,11 @@ import styles from '../styles/index.module.css';
 
 const StatisticList = ({ stats }) => (
   <ul className={styles.statList}>
-    {stats.map((el) => (
-      <li className={styles.item} key={el.id}>
-        <span className={styles.label}>{el.label}</span>
+    {stats.map(({ id, label, percentage }) => (
+      <li className={styles.item} key={id}>
+        <span className={styles.label}>{label}</span>
         <span className={styles.percentage}>
-          {el.percentage}
+          {percentage}
           %
         </span>
       </li>
@@ -19,5 +19,9 @@ const StatisticList = ({ stats }) => (
 export default StatisticList;
 
 StatisticList.propTypes = {
-  stats: PropTypes.array.isRequired,
+  stats: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    label: PropTypes.string,
+    percentage: PropTypes.number,
+  })).isRequired,
 };
